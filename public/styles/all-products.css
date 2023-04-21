@@ -90,7 +90,7 @@
    } 
 
    .customer-all-products, .product-list {
-    grid-template-columns: 20rem;
+    grid-template-columns: 100%;
     gap: 2rem;
    }
 
