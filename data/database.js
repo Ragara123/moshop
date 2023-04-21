@@ -10,7 +10,6 @@ if(process.env.MONGODB_URL) {
 }
 
 async function connect() {
-    console.log(mongodbUrl)
     const client = await MongoClient.connect(mongodbUrl)
     database = client.db('moshop')
 }

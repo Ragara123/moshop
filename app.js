@@ -10,6 +10,11 @@ const customerRoutes = require('./routes/customer')
 const adminRoutes = require('./routes/admin')
 
 let port = 3000
+let mongodbUrl = 'mongodb://127.0.0.1:27017'
+
+if(process.env.MONGODB_URL) {
+    mongodbUrl = process.env.MONGODB_URL
+}
 
 if(process.env.PORT) {
     port = process.env.PORT
@@ -20,7 +25,7 @@ const app = express()
 const MongoDbStore = mongodbStore(session)
 
 const sessionStore = new MongoDbStore({
-    uri: 'mongodb://127.0.0.1:27017',
+    uri: mongodbUrl,
     databaseName: 'moshop',
     collection: 'sessions'
 })
@@ -79,7 +84,6 @@ app.use(function(error, req, res, next) {
 })
 
 db.connectToDatabase().then(() => {
-    console.log(port)
     app.listen(port)
 }).catch(error => {
     console.log(error)
