@@ -68,6 +68,7 @@
     .main-orders {
         width: 90%;
         margin: 5rem auto;
+        padding-top: 0.25rem;
     }
     
 }

@@ -87,6 +87,7 @@
    .main {
     width: 95%;
     margin: 5rem auto;
+    padding-top: 0.25rem;
    } 
 
    .customer-all-products, .product-list {

@@ -91,6 +91,7 @@
 @media screen and (max-width: 30rem) {
     .modify-product-main {
         margin: 4rem auto;
+        padding-top: 0.25rem;
     }
 
     .post {
