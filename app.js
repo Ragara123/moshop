@@ -79,6 +79,7 @@ app.use(function(error, req, res, next) {
 })
 
 db.connectToDatabase().then(() => {
+    console.log(port)
     app.listen(port)
 }).catch(error => {
     console.log(error)
