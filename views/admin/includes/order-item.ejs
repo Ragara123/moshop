@@ -1,0 +1,34 @@
+<li>
+    <article class="orders-container orders-spacing">
+        <div>
+            <p><span class="order-amount">$<%= order.totalOrderAmount %></span> - <time class="order-time" datetime="<%= order.dateStamp %>"><%= order.transformedDate %></time></p>
+            <address class="address">
+                <a class="user-email" href="mailto:<%= order.user.email %>"><%= order.user.fullname %></a>
+                <div class="location"><span><%= order.user.address.street %></span> <span>(<%= order.user.address.postalCode %></span> <span><%= order.user.address.city %>)</span></div>
+            </address>
+            <ul class="order-items">
+                <% for(const product of order.products) { %>
+                    <li class="order-item"><%= product.name %> - <span>$<%= product.itemOrderAmount %> ($<%= product.price %> x <%= product.numberOfItems %>)</span></li>
+                <% } %>
+            </ul>
+            <form action="/admin/orders/manage" method="POST">
+                <select name="status" id="status" class="status-options">
+                    <option value="pending"<% if(order.order.status === 'pending') { %>
+                        selected
+                    <% } %>>Pending</option>
+                    <option value="fulfilled" <% if(order.order.status === 'fulfilled') { %>
+                        selected
+                    <% } %>>Fulfilled</option>
+                    <option value="cancelled" <% if(order.order.status === 'cancelled') { %>
+                        selected
+                    <% } %>>Cancelled</option>
+                </select>
+                <input type="hidden" value="<%= order.order._id %>" name="id">
+                <button class="update-btn">Update</button>
+            </form>
+        </div>
+        <div>
+            <p class="status"><%= order.order.status %></p>
+        </div>
+    </article>
+</li>

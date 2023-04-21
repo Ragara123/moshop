@@ -1,0 +1,21 @@
+.auth-title-error {
+    text-align: center;
+    color: rgb(126, 26, 26);
+}
+
+.auth-body-error {
+    text-align: center;
+    color: rgb(192, 34, 34);
+}
+
+.to-safety {
+    text-align: center;
+}
+
+.to-safety a {
+    color: olivedrab;
+}
+
+.to-safety a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,14 @@
+<%- include('../customer/includes/head', { title: 'New Product' }) %>
+<link rel="stylesheet" href="/styles/update-product.css">
+<script src="/scripts/image-preview.js" defer></script>
+</head>
+<body>
+    <main class="modify-product-main">
+        <%- include('./includes/header') %>
+        <form action="/admin/new-product" method="POST" enctype="multipart/form-data" class="post">
+            <h1>Add new Product</h1>
+        <%- include('./includes/product-form') %>
+        </form>
+    </main>
+</body>
+</html>

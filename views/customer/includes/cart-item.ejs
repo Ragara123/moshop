@@ -1,0 +1,13 @@
+<li class="cart-list-item">
+    <article class="cart-container">
+        <div class="cart-details">
+            <h2><%= item.title %></h2>
+            <p>$<%= item.price * item.numberOfItems %><span>($<%= item.price %>)</span></p>
+        </div>
+        <form id="update-cart-form" action="/cart/update" method="POST">
+            <input type="text" name="amount" id="amount" class="amount">
+            <input type="hidden" name="itemId" value="<%= item.id %>">
+            <button id="update-cart-btn" class="update-btn">Update</button>
+        </form>
+    </article>
+</li>

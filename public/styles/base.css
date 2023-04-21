@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(27, 22, 22);
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    border-bottom: 2px solid rgba(136, 79, 41, 0.788);
+    padding: 0.3rem 1rem;
+    box-sizing: border-box;
+    padding: 0 2rem;
+}
+
+#shop-title {
+    color:  rgb(236, 177, 88);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.list {
+    margin: 0;
+    padding: 5% 0;
+    list-style: none;
+    display: flex;
+}
+
+.open-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    gap: 3rem;
+    top: 2.3rem;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(27, 22, 22);
+    padding-top: 5rem;
+    z-index: 1;
+}
+
+.open-menu li {
+    padding: 0;
+}
+
+.list li {
+    margin: 0 0.6rem;
+    font-size: 0.7rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+#cart {
+    background-color:  rgb(231, 157, 46);
+    margin-left: 0.2rem;
+    padding: 0 0.6rem;
+    border-radius: 12px;
+    color: white;
+}
+
+.list li a {
+    color:  rgba(250, 174, 61, 0.788);
+    padding: 0.2rem 0.4rem;
+    border-radius: 2px;
+}
+
+.list li a:hover,
+.logout-form button:hover {
+    background-color: rgb(63, 55, 55);
+}
+
+#logout {
+    border: 1px solid rgba(210, 105, 30, 0.452);
+}
+
+.logout-form {
+    margin: 0 0.6rem; 
+    font-size: 0.7rem;
+    margin-top: -0.2rem;
+}
+
+.logout-form button {
+    color:  rgba(250, 174, 61, 0.788);
+    padding: 0.2rem 0.4rem;
+    border-radius: 2px;
+    border: 1px solid rgba(210, 105, 30, 0.452);
+    font-family: inherit;
+    background-color: inherit;
+    cursor: pointer;
+    font-size: 0.7rem;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 2rem;
+    height: 0.2rem;
+    background-color: white;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+@media screen and (max-width : 48rem) {
+    .header {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 30rem) {
+    .header {
+    width: 93%;
+    position: fixed;
+    top: 0;
+    left: 1rem;
+    background-color: rgb(27, 22, 22);
+    z-index: 2;
+    }
+
+    .list {
+        display: none;
+    }
+    .open-menu {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .list li a {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    .logout-form button {
+        font-size: 1rem;
+    }
+}

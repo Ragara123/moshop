@@ -1,0 +1,24 @@
+<%- include('./includes/head', { title: 'All Products' }) %>
+<link rel="stylesheet" href="/styles/all-products.css">
+<script src="/scripts/get-cart-data.js" defer></script>
+</head>
+<body>
+   <%- include('./includes/header') %>
+    <main class="main">
+        <h1 id="title">All Products</h1>
+        <ul class="customer-all-products">
+        <% for (const product of products) { %>
+        <li>
+        <article class="card">
+            <img src="<%= product.imagePath %>" alt="A product displayed for sale.">
+            <div class="card-description">
+                <h4><%= product.title %></h4>
+                <a href="/products/<%= product._id %>">View Details</a>
+            </div>
+        </article>
+        </li>
+        <% } %>
+        </ul>
+    </main>
+</body>
+</html>

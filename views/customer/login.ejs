@@ -1,0 +1,25 @@
+<%- include('./includes/head', { title: "Log In"}) %>
+<link rel="stylesheet" href="/styles/signup.css">
+<script src="/scripts/get-cart-data.js" defer></script>
+</head>
+<body>
+    <main>
+        <%- include('./includes/header') %>
+        <h1 id="login-title">Login</h1>
+        <%- include('./includes/error', { hasError: inputData.hasError, errorMessage: inputData.errorMessage }) %>
+        <form class="login-form" action="/login" method="POST"> 
+            <div class="input-container">
+                <label for="email">E-Mail</label>
+                <input type="email" id="email" name="email" value="<%= inputData.email %>" required>
+            </div>
+            <div class="input-container">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password"  value="<%= inputData.password %>" required>
+            </div>
+            <div class="btn-container">
+                <button>Login</button>
+                <a href="/signup">Create a new user</a>
+            </div>
+        </form>
+    </main>
+</body>

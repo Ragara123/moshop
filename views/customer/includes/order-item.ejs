@@ -1,0 +1,15 @@
+<li class="order-single-list">
+    <article class="orders-container">
+        <div>
+            <p><span class="order-amount">$<%= order.totalOrderAmount %></span> - <time class="order-time" datetime="<%= order.dateStamp %>"><%= order.transformedDate %></time></p>
+            <ul class="order-items">
+                <% for(const product of order.products) { %>
+                    <li class="order-item"><%= product.name %> - <span>$<%= product.itemOrderAmount %> ($<%= product.price %> x <%= product.numberOfItems %>)</span></li>
+                <% } %>
+            </ul>
+        </div>
+        <div>
+            <p class="status"><%= order.order.status %></p>
+        </div>
+    </article>
+</li>

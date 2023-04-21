@@ -1,0 +1,99 @@
+.post {
+    width: 50%;
+    margin: 1rem auto;
+}
+
+.post h1 {
+    color: rgb(241, 233, 233);
+    font-size: 1.3rem;
+    margin-top: 0;
+}
+
+.post label {
+    color: rgb(175, 171, 171);
+    font-size: 0.8rem;
+    display: block;
+    margin: 1rem 0 0.0rem 0;
+}
+
+.post input, .post textarea {
+    border-radius: 2px;
+    outline: none;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+.post input {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+}
+
+#image {
+    color: white;
+}
+
+.post textarea {
+    width: 100%;
+}
+
+.btn {
+    font-family: inherit;
+    width: 4rem;
+    height: 1.8rem;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+}
+
+.reset {
+    background-color: rgb(32, 29, 29);
+    color: rgb(255, 150, 74);
+    border: 1px solid  rgba(255, 149, 74, 0.589);
+}
+
+.reset:hover {
+    background-color: rgb(59, 53, 53);
+}
+
+.save {
+    background-color: rgb(255, 129, 39);
+    color: white;
+}
+
+.save:hover {
+    background-color: rgb(214, 108, 33);
+}
+
+.image-preview {
+    display: flex;
+    align-items: center;
+}
+
+#image-preview {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    margin-top: 1.7rem;
+    margin-left: 1rem;
+    border-radius: 2px;
+    display: none;
+}
+
+@media screen and (max-width: 48rem) {
+    .post {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 30rem) {
+    .modify-product-main {
+        margin: 4rem auto;
+    }
+
+    .post {
+        width: 80%;
+    }
+}

@@ -1,0 +1,16 @@
+<%- include('./includes/head', { title: 'All Orders' }) %>
+<link rel="stylesheet" href="/styles/orders.css">
+<script src="/scripts/get-cart-data.js" defer></script>
+</head>
+<body>
+    <%- include('./includes/header') %>
+    <main class="main-orders">
+        <h1 class="orders-title">All Your Orders</h1>
+        <ul class="orders-list">
+            <% for(const order of ordersList) { %>
+                <%- include('./includes/order-item', { order: order }) %>
+            <% } %>
+        </ul>
+    </main>
+</body>
+</html>

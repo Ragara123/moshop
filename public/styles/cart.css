@@ -1,0 +1,160 @@
+#cart-empty-title {
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(209, 202, 202);
+}
+
+#cart-empty-body {
+    text-align: center;
+    color: white;
+    width: 25rem;
+    margin: 0 auto;
+}
+
+.main {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#cart-title {
+    color: rgb(245, 237, 237);
+    font-size: 1.5rem;
+}
+
+.cart-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cart-list-item {
+    background-color: rgb(15, 8, 8);
+    border-radius: 8px;
+    padding: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.cart-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-details h2 {
+    color: white;
+    font-size: 1rem;
+    margin-top: 0;
+    font-weight: normal;
+    margin-bottom: -0.5rem;
+}
+
+.cart-details p {
+    color: rgb(216, 210, 210);
+    font-size: 0.9rem;
+}
+
+.cart-details p span {
+    font-style: italic;
+    color: rgb(146, 144, 144);
+}
+
+.cart-container form {
+    margin-top: 0.3rem;
+}
+
+.amount {
+    outline: none;
+    padding: 0.3rem;
+    border-radius: 5px;
+    text-indent: 0.4rem;
+}
+
+.update-btn {
+    color:  rgba(250, 174, 61, 0.788);
+    padding: 0.2rem 0.4rem;
+    border-radius: 2px;
+    border: 1px solid rgba(210, 105, 30, 0.452);
+    font-family: inherit;
+    background-color: inherit;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.update-btn:hover {
+    background-color: rgb(63, 55, 55);
+}
+
+.purchase-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.total-amount {
+    font-size: 1.2rem;
+    color: rgb(224, 147, 4);
+    font-weight: bold;
+}
+
+.purchase-info {
+    color: rgb(199, 130, 3);
+    font-size: 0.8rem;
+}
+
+.buy-products-btn {
+    background-color:  rgb(231, 157, 46);
+    font-family: inherit;
+    font-weight: bold;
+    color: rgb(231, 223, 223);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.buy-products-btn:hover {
+    background-color: rgb(202, 133, 30);
+}
+
+@media screen and (max-width: 48rem) {
+    .main {
+        width: 70%;
+    }
+
+    #cart-empty-title {
+        font-size: 1.5rem;
+    }
+    
+    #cart-empty-body {
+        width: 100%;
+    }
+    
+    .cart-list-item {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 30rem) {
+    .main {
+        width: 80%; 
+        margin: 4rem auto;
+    }
+    
+    .cart-container form {
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .amount {
+        width: 90%;
+        padding: 0.5rem;
+    }
+    
+    .update-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+        margin-top: 0.7rem;
+        margin-left: auto;
+    }
+}

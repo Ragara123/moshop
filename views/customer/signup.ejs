@@ -1,0 +1,47 @@
+<%- include('./includes/head', { title: "Sign Up"}) %>
+<link rel="stylesheet" href="/styles/signup.css">
+<script src="/scripts/get-cart-data.js" defer></script>
+</head>
+<body>
+    <main>
+    <%- include('./includes/header') %>
+    <h1 id="signup-title">Create New Account</h1>
+    <%- include('./includes/error', { hasError: inputData.hasError, errorMessage: inputData.errorMessage }) %>
+    <form class="signup-form" action="/signup" method="POST">
+        <div class="input-container">
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="email" value="<%= inputData.email %>" required>
+        </div>
+        <div class="input-container">
+            <label for="email">Confirm Email</label>
+            <input type="email" id="confirm-email" name="confirm-email" value="<%= inputData.confirmEmail %>" required>
+        </div>
+        <div class="input-container border-line">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" value="<%= inputData.password %>" required>
+        </div>
+        <div>
+        <div class="input-container">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" value="<%= inputData.fullname %>" required>
+        </div>
+        <div class="input-container">
+            <label for="street">Street</label>
+            <input type="text" id="street" name="street" value="<%= inputData.street %>" required>
+        </div>
+        <div class="input-container">
+            <label for="postal-code">Postal Code</label>
+            <input type="number" id="postal-code" name="postal-code" value="<%= inputData.postalCode %>" required>
+        </div>
+        <div class="input-container">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" value="<%= inputData.city %>" required>
+        </div>
+        <div class="btn-container">
+            <button>Create Account</button>
+            <a href="/login">Login instead</a>
+        </div>
+    </form>
+    </main>
+</body>
+</html>

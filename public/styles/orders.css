@@ -1,0 +1,121 @@
+.main-orders {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.orders-title {
+    font-size: 1.5rem;
+    color: rgb(211, 205, 205);
+}
+
+.orders-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.order-single-list {
+    margin-bottom: 1rem;
+}
+
+.orders-container {
+    display: flex;
+    justify-content: space-between;
+    background-color:  rgb(58, 50, 50);
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+.orders-container p {
+    margin: 0;
+    color: rgb(233, 225, 225);
+}
+
+.order-amount {
+    color: rgb(214, 143, 10);
+}
+
+.order-time {
+    color: rgb(233, 225, 225);
+}
+
+.order-items {
+    list-style: disc;
+    margin-top: 0.2rem;
+}
+
+.order-item {
+    color: rgb(233, 225, 225);
+    font-size: 0.8rem;
+}
+
+.status {
+    text-transform: uppercase;
+    background-color: orange;
+    padding: 0 0.6rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 48rem) {
+    .main-orders {
+        width: 60%;
+    }   
+}
+
+
+@media screen and (max-width: 30rem) {
+    .main-orders {
+        width: 90%;
+        margin: 5rem auto;
+    }
+    
+}
+
+
+/* Admin css styles */
+
+.orders-spacing {
+    margin-top: 1rem;
+}
+
+.user-email {
+    color: rgba(233, 182, 89, 0.801);
+}
+
+.user-email:hover {
+    text-decoration: underline;
+}
+
+.address {
+    margin-top: 0.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.location {
+    margin-top: 0.3rem;
+    color: rgb(216, 208, 208);
+}
+
+.update-btn {
+    color:  rgba(250, 174, 61, 0.788);
+    padding: 0.2rem 0.4rem;
+    border-radius: 2px;
+    border: 1px solid rgba(210, 105, 30, 0.452);
+    font-family: inherit;
+    background-color: inherit;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.update-btn:hover {
+    background-color: rgb(90, 84, 84);
+}
+
+.status-options {
+    padding: 0.2rem 0.4rem;
+    font-family: inherit;
+    border-radius: 4px;
+    font-weight: bold;
+    outline: none;
+}

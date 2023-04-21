@@ -1,0 +1,34 @@
+<%- include('./includes/head', { title: 'Cart Items' }) %>
+<link rel="stylesheet" href="/styles/cart.css">
+<script src="/scripts/get-cart-data.js" defer></script>
+</head>
+<body>
+    <%- include('./includes/header') %>
+    <main class="main">
+        <% if(cartIsEmpty) { %>
+            <h1 id="cart-empty-title">Your Cart is Empty</h1>
+            <p id="cart-empty-body">Browse our products and add to your cart the ones you wish to purchase.</p>
+            <form id="update-cart-form">
+                <!-- form element added to remove an error -->
+            </form>
+        <% } else { %>
+            <h1 id="cart-title">Your Cart</h1>
+            <ol class="cart-list">
+                <% for(const item of items) { %>
+                    <%- include('./includes/cart-item', { item: item }) %>
+                <% } %>
+            </ol>
+            <div class="purchase-details">
+                <p class="total-amount">Total: $<%= totalAmount %></p>
+                <% if(!locals.isAuth) { %>
+                <p class="purchase-info">Log in to proceed and purchase the items.</p>
+                <% } else { %>
+                <form action="/orders" method="POST">
+                    <button class="buy-products-btn">Buy Products</button>
+                </form>
+                <% } %>
+            </div>
+        <% } %>
+    </main>
+</body>
+</html>

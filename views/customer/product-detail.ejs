@@ -1,0 +1,26 @@
+<%- include('./includes/head', { title: "Product Detail" }) %>
+<link rel="stylesheet" href="/styles/product-detail.css">
+<script src="/scripts/get-cart-data.js" defer></script>
+<script src="/scripts/cart.js" defer></script>
+</head>
+<body>
+    <%- include('./includes/header') %>
+    <main>
+        <article class="card-detail">
+            <section class="card-display-section">
+                <div>
+                    <img src="<%= product.imagePath %>" alt="A product with all its details - title, summary,price and description" class="image">
+                </div>
+                <div>
+                    <h1 class="product-title"><%= product.title %></h1>
+                    <p class="product-price">$<%= product.price %></p>
+                    <button class="btn-cart-actions" id="cart-btn" data-productid="<%= product._id %>">Add to Cart</button>
+                </div>
+            </section>
+            <section class="card-info-section">
+                <p class="product-summary"><%= product.summary %></p>
+                <p class="product-description"><%= product.description %></p>
+            </section>
+        </article>
+    </main>
+</body>

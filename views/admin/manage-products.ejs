@@ -1,0 +1,19 @@
+<%- include('../customer/includes/head', { title: 'Manage Products' }) %>
+<link rel="stylesheet" href="/styles/all-products.css">
+</head>
+<body>
+    <%- include('./includes/header') %>
+    <main class="main manage-admin">
+        <h1 class="title">Product Administration</h1>
+        <div>
+        <h2 id="action-title">Manage Products</h2>
+        <a href="/admin/new-product" id="add-product-btn">Add Product</a>
+        </div>
+        <ul class="product-list">
+            <% for (const product of products) { %>
+                    <%- include('./includes/admin-product-item', { product: product }) %>
+            <% } %>
+        </ul>
+    </main>
+</body>
+</html>

@@ -1,0 +1,118 @@
+.main {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.title, #title {
+    color: rgb(228, 222, 222);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.card {
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 10rem;
+    height: 8rem;
+    vertical-align: middle;
+    object-fit: cover;
+}
+
+.card-description {
+    background-color: rgb(12, 9, 9);
+    text-align: center;
+    width: 10rem;
+    padding: 1px;
+    padding-bottom: 0.8rem;
+}
+
+.card-description h4 {
+    color: white;
+    font-weight: normal;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-description a {
+    color: rgba(233, 136, 24, 0.712);
+    border: 1px solid rgba(233, 136, 24, 0.712);
+    padding: 0.3rem 0.8rem;
+    font-size: 0.6rem;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.card-description a:hover {
+    background-color: rgb(44, 38, 38);
+}
+
+#action-title {
+    color: rgb(207, 200, 200);
+    font-size: 1rem;
+    margin-top: -0.8rem;
+    margin-bottom: 0.3rem;
+}
+
+#add-product-btn {
+    color: white;
+    background-color:  rgb(250, 123, 32);
+    padding: 0.2rem 0.9rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+#add-product-btn:hover {
+    background-color: rgb(250, 153, 84);
+}
+
+.product-list, .customer-all-products {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 10rem 10rem 10rem;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+    width: 100%;
+}
+
+/* Admin css  */
+
+
+@media screen and (max-width: 30rem) {
+   .main {
+    width: 70%;
+    margin: 5rem auto;
+   } 
+
+   .customer-all-products, .product-list {
+    grid-template-columns: 20rem;
+    gap: 2rem;
+   }
+
+   .card img {
+    width: 20rem;
+    height: 16rem;
+}
+
+.card-description {
+    width: 20rem;
+    padding: 2px;
+    padding-bottom: 1.6rem;
+}
+
+.card-description h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.card-description a {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+}
+
+}

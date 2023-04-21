@@ -1,0 +1,13 @@
+<%- include('./includes/head', { title: 'Error' }) %>
+<link rel="stylesheet" href="/styles/auth-error.css">
+<script src="/scripts/get-cart-data.js" defer></script>
+</head>
+<body>
+    <main>
+   <%- include('./includes/header') %>
+   <h1 class="auth-title-error">Not authenticated!</h1>
+   <p class="auth-body-error">You are not authenticated and therefore not allowed to access this page</p>
+   <p class="to-safety"><a href="/">Back to home</a></p>
+   </main>
+</body>
+</html>
