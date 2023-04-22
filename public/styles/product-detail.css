@@ -70,8 +70,17 @@
 }
 
 @media screen and (max-width: 30rem) {
+    .main {
+        margin: 5rem auto;
+    }
+
     .card-detail {
-        width: 90%;
+        width: 100%;
         padding-top: 0.25rem;
+    }
+    
+    .image {
+        width: 10rem;
+        height: 8rem;
     }
 }
